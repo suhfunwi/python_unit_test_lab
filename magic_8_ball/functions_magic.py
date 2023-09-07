@@ -10,7 +10,7 @@ def main():
 
 
 def generate_url_for_question(question):
-    url = f'https://magic-eight-ball.azurewebsites.net/magic/JSON/{question}'
+    url = f'https://magic-8-ball-mctc.uc.r.appspot.com/magic/JSON/{question}'
     return url
 
 
