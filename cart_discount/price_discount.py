@@ -6,7 +6,7 @@ def main():
 
 def discount(item_prices):
     """ Complete this function that returns the discount earned for a list of item prices
-    If a customer has ordered more than three items, the cheapest item is free.
+    If a customer has ordered three or more items, the cheapest item is free.
     Example: if this function is called with a list of [10, 4, 20] then return 4.
     """
 
