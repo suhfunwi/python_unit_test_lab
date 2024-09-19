@@ -39,6 +39,13 @@ class TestStudentLists(TestCase):
         test_class.add_student('Test Student')
         test_class.remove_student('Test Student')
         self.assertNotIn('Test Student', test_class.class_list)
+    #     adds, removes, and then asserts that the student
+    #     was actually removed from the class_list
+    def test_add_remove_student_ensure_removed(self):
+        test_class = ClassList(2)
+        test_class.add_student('Test Student')
+        test_class.remove_student('Test Student')
+        self.assertNotIn('Test Student', test_class.class_list)
 
 
     ## TODO write a test that adds some example students, 
@@ -99,6 +106,12 @@ class TestStudentLists(TestCase):
     ## TODO write a test for index_of_student when the class_list list is empty.  
     # Assert index_of_student returns None for a student if the list is empty. 
     # use assertIsNone.
+    def test_index_of_student_is_none_if_classlist_is_empty(self):
+        test_class = ClassList(2)
+        index = test_class.index_of_student('Test Student')
+        self.assertIsNone(index)
+    #     checks the index of classlist and the test student isn't in there
+    #       Typical order of tests is Arrange, Add, Action
  
  
     ## TODO write another test for index_of_student. In the case when the 
